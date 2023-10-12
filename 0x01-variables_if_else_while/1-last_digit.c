@@ -13,11 +13,10 @@ int main(void)
 {
 	int n;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-
 	int lDigit = n % 10;
 
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
 	/* last digit saga*/
 	if (lDigit > 5)
