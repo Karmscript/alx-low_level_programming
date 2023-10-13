@@ -10,11 +10,11 @@ int main(void)
 	/* loop that prints all letters except q and e */
 	for (alpha = 'a'; alpha <= 'z'; alpha++)
 	{
-	putchar(alpha);
 	if (alpha == 'e' || alpha == 'q')
 	{
 	continue;
 	}
+	putchar(alpha);
 	}
 	putchar('\n');
 
