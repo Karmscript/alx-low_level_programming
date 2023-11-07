@@ -13,16 +13,15 @@ int main(void)
 	{
 	if ((i / 10) < (i % 10))
 	{
-	if (i != 89)
-	{
 	putchar((i / 10) + '0');
 	putchar((i % 10) + '0');
+	if (i != 89)
+	{
 	putchar(',');
 	putchar(' ');
 	}
 	}
 	}
-	putchar(8 + '0');
-	putchar(9 + '0');
+	putchar('\n');
 	return (0);
 }
