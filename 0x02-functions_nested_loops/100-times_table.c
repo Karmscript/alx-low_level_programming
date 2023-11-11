@@ -16,34 +16,28 @@ void print_times_table(int n)
 	{
 	int table_num = i * j;
 
-	if (table_num < 10)
-	{
+	if (table_num == 0 && j == 0)
 	_putchar(table_num + '0');
-	}
-	else if ((table_num >= 10) && (table_num <= 99))
-	{
-	_putchar((table_num / 10) + '0');
-	_putchar((table_num % 10) + '0');
-	}
-	else if (table_num >= 100)
-	{
-	_putchar((table_num / 100) + '0');
-	_putchar(((table_num / 10) % 10) + '0');
-	_putchar((table_num % 10) + '0');
-	}
-	if (j < n)
+	else if (j != 0)
 	{
 	_putchar(',');
 	_putchar(' ');
-	if (table_num < 10)
+	if (table_num > 99)
+	{
+	_putchar((table_num / 100) + '0');
+	_putchar(((table_num / 10) % 10) + '0');
+	}
+	else if (table_num <= 99 && table_num > 9)
+	{
+	_putchar(' ');
+	_putchar((table_num / 10) + '0');
+	}
+	else
 	{
 	_putchar(' ');
 	_putchar(' ');
 	}
-	else if ((table_num >= 10) && (table_num < 100))
-	{
-	_putchar(' ');
-	}
+	_putchar((table_num % 10) + '0');
 	}
 	}
 	_putchar('\n');
