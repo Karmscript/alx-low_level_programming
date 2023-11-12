@@ -2,7 +2,7 @@
 
 /**
   * main - Entry point of function
-  * return: no return value
+  * return: Always 0 (Success)
   */
 int main(void)
 {
@@ -17,4 +17,5 @@ int main(void)
 	k = i + j;
 	printf("%d\n", k);
 	}
+	return (0);
 }
