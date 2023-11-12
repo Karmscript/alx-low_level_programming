@@ -2,20 +2,22 @@
 
 /**
   * main - Entry point of function
-  * return: Always 0 (Success)
+  * Return: Always 0 (Success)
   */
 int main(void)
 {
-	int i = 0;
-	int j = 0;
-	int k;
+	int i;
+	int sum = 0;
 
-	while (i < 1024 && j < 1024)
+	for (i = 0; i < 1024; i++)
 	{
-	i += 3;
-	j += 5;
-	k = i + j;
-	printf("%d\n", k);
+	if ((i % 3 == 0) || (i % 5 == 0))
+
+	{
+	sum = sum + i;
+
+	printf("%d\n", sum);
+	}
 	}
 	return (0);
 }
