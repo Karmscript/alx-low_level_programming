@@ -23,11 +23,11 @@ int main(int argc, char *argv[])
 		for (a = 1; a < argc; a++)
 		{
 			if (isdigit(*argv[a]))
-					{
-						b = atoi(argv[a]);
-						i += b;
-						printf("%d\n", i);
-					}
+			{
+				b = atoi(argv[a]);
+				i += b;
+				printf("%d\n", i);
+			}
 			else
 			{
 				printf("Error\n");
