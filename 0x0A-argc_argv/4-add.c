@@ -3,37 +3,40 @@
 #include <stdlib.h>
 
 /**
-  * main - Entry point of function
-  * @argc: argument counter
-  * @argv: the arguments themselves
-  * Return: 0 indicates success and 1 indicates error
-  */
+ * main - Entry point of function
+ * @argc: argument counter
+ * @argv: the arguments themselves
+ * Return: 0 indicates success and 1 indicates error
+ */
 int main(int argc, char *argv[])
 {
-	int i = 0;
+    int i = 0;
+    int a, b;
 
-	int a, b;
+    if (argc == 1)
+    {
+        printf("0\n");
+    }
+    else
+    {
+        for (a = 1; a < argc; a++)
+        {
+            char *current_arg = argv[a];
+            while (*current_arg)
+            {
+                if (!isdigit(*current_arg))
+                {
+                    printf("Error\n");
+                    return 1;
+                }
+                current_arg++;
+            }
 
-	if (argc == 1)
-	{
-		printf("0\n");
-	}
-	else
-	{
-		for (a = 1; a < argc; a++)
-		{
-			if (*argv[a] >= '0' && *argv[a] <= '9')
-			{
-				b = atoi(argv[a]);
-				i += b;
-			}
-			else
-			{
-				printf("Error\n");
-				return (1);
-			}
-		}
-		printf("%d\n", i);
-	}
-	return (0);
+            b = atoi(argv[a]);
+            i += b;
+        }
+        printf("%d\n", i);
+    }
+
+    return 0;
 }
