@@ -22,11 +22,10 @@ int main(int argc, char *argv[])
 	{
 		for (a = 1; a < argc; a++)
 		{
-			if (isdigit(*argv[a]))
+			if (*argv[a] >= '0' && *argv[a] <= '9')
 			{
 				b = atoi(argv[a]);
 				i += b;
-				printf("%d\n", i);
 			}
 			else
 			{
@@ -34,6 +33,7 @@ int main(int argc, char *argv[])
 				return (1);
 			}
 		}
+		printf("%d\n", i);
 	}
 	return (0);
 }
