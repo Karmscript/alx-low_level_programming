@@ -17,13 +17,13 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	for (i = 0; i <= str_length; i++)
-	{
-		copy[i] = str[i];
-	}
 	if (copy == NULL)
 	{
 		return (NULL);
+	}
+	for (i = 0; i <= str_length; i++)
+	{
+		copy[i] = str[i];
 	}
 	return (copy);
 }
