@@ -1,29 +1,30 @@
-#include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 /**
-  * _strdup - returns a pointer to a newly allocated space in memory
-  * @str: string of unknown size
-  * Return: Copy if successful or NULL if not
-  */
+ * _strdup - copy the string given to a newly allocated space in memory
+ * @str: string to copy
+ * Return: returns a pointer to the copy, or NULL if it fails
+ */
+
 char *_strdup(char *str)
 {
-	size_t str_length = strlen(str);
-	char *copy = (char *)malloc((str_length + 1) * sizeof(char));
-	unsigned int i;
+	char *ptr;
+	unsigned int x, len;
 
 	if (!str)
-	{
 		return (NULL);
-	}
-	if (copy == NULL)
-	{
+
+	for (len = 0; str[len]; len++)
+		;
+	len++;
+	ptr = malloc(len * sizeof(char));
+
+	if (!ptr)
 		return (NULL);
-	}
-	for (i = 0; i <= str_length; i++)
-	{
-		copy[i] = str[i];
-	}
-	return (copy);
+
+	for (x = 0; x <= len; x++)
+		ptr[x] = str[x];
+
+	return (ptr);
 }
