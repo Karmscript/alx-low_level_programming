@@ -5,7 +5,7 @@
 /**
   * malloc_checked - allocates memory using malloc
   * @b: unsigned integer
-  * Return: void pointer if successful, exit with a status value of 98 if not successful
+  * Return: void pointer if successful, else exit with 98
   */
 void *malloc_checked(unsigned int b)
 {
